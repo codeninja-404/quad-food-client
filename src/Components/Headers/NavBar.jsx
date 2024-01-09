@@ -17,13 +17,13 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="mx-auto bg-transparent border-none shadow-none  max-w-screen-xl px-4 py-3">
+    <div className="mx-auto relative bg-transparent border-none shadow-none  max-w-screen-xl px-4 py-3">
       <div className="flex text-black items-center justify-between gap-y-4 ">
         <Typography
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 ml-2 cursor-pointer py-1.5"
+          className="mr-4 ml-2 cursor-pointer py-1.5 text-xl font-extrabold"
         >
           pti.
         </Typography>
@@ -55,7 +55,7 @@ const NavBar = () => {
                     }`} />
                 </Button>
                 {isOpen && (
-                  <div className="fixed w-40 z-10  shadow-lg">
+                  <div className="fixed w-40 z-50  shadow-lg">
                     <ul className="absolute -left-16 md:left-0 w-40  py-3 mt-2 bg-white border rounded-2xl overflow-hidden">
                       <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
                         <NavLink className="p-2  ">Home</NavLink>
