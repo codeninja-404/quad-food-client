@@ -12,7 +12,7 @@ const Banner = () => {
       </div>
       <div className="lg:w-1/2 flex flex-col mb-4 ite lg:mb-0  relative">
         <img className="w-full z-20 h-auto" src={bannerImg} alt="Banner Photo" />
-        <div className="h-20 lg-hidden w-full lg:mb-0 bg-[#EC7C53]  absolute bottom-0  z-10">
+        <div className="h-32 rounded-3xl md:h-52 lg:hidden w-full lg:mb-0 bg-[#EC7C53]  absolute bottom-0  z-10">
 
         </div>
       </div>
