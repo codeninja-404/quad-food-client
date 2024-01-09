@@ -19,13 +19,12 @@
 }
 .image-swiper-button-next,
 .image-swiper-button-prev {
-  color: #ff5600;
-  font-size: 10px;
-  border-radius: 5px;
-  padding: 10px;
+  color: #5F5F5F;
   cursor: pointer;
   position: relative;
-  border-radius: 5px;
-  padding: 10px;
   cursor: pointer;
+}
+.swiper-button-disabled{
+    
+    color: #C4C4C4;
 }

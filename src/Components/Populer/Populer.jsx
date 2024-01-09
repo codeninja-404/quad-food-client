@@ -16,27 +16,27 @@ const Populer = () => {
       className="mx-auto  max-w-screen-xl
      text-center"
     >
-      <div className="flex justify-between">
+      <div className="flex mx-4 justify-between items-center">
         <div>
-<h1>Populer</h1>
+<h1 className="text-3xl">Populer</h1>
         </div>
-        <div>
-        <div className="flex gap-2">
-      <div className="image-swiper-button-prev"><MdArrowBackIos /></div>
-        <div className="image-swiper-button-next"><MdArrowForwardIos /></div>
+        <div className="flex justify-center items-center">
+            <p className="text-[#ff5600] text-xl">AddMore</p>
+        <div className="flex gap-2 px-4">
+      <div className="image-swiper-button-prev"><MdArrowBackIos className="text-xl" /></div>
+        <div className="image-swiper-button-next"><MdArrowForwardIos className="text-xl"/></div>
       </div>
         </div>
       </div>
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={1}
-        // effect={"coverflow"}
         grabCursor={true}
         className="mySwiper"
         navigation={{
             nextEl: '.image-swiper-button-next',
             prevEl: '.image-swiper-button-prev',
-            disabledClass:'.swiper-button-disabled'
+            disabledClass:'swiper-button-disabled'
           }}
   
         modules={[Navigation]}
