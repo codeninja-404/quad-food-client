@@ -32,7 +32,7 @@ const NavBar = () => {
           <div className="flex justify-center items-center gap-3 w-full ">
             <div className="relative w-7/12 ">
               <input
-                placeholder="Search AudioBook..."
+                placeholder="Search AudioBook"
                 className="text-black p-2 rounded-xl pl-10 w-full"
                 type="text"
               />
