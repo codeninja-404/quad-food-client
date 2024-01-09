@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#menulist .active{
+  background: #D5D5D5 ;
+  color:#ff6500;
+}
