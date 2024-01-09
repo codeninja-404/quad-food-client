@@ -33,7 +33,7 @@ const NavBar = () => {
             <div className="relative w-7/12 ">
               <input
                 placeholder="Search AudioBook"
-                className="text-black p-2 rounded-xl pl-10 w-full"
+                className="text-black p-2 text-sm  py-2.5 rounded-xl pl-10 w-full"
                 type="text"
               />
               <IconButton

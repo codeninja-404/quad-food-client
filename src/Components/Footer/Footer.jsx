@@ -1,7 +1,7 @@
 import { Button, Typography } from "@material-tailwind/react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import footerImg from "../../assets/Images/Image2.png";
-import { LuUser } from "react-icons/lu";
+
 import { FaGoogle } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="relative w-full lg:mr-20 md:w-3/5 py-10 ">
               <input
                 placeholder="Enter Your Email"
-                className="text-black p-2 rounded-xl pr-10 w-full"
+                className="text-black text-sm py-2.5 p-2 rounded-xl pr-10 w-full"
                 type="text"
               />
               <Button
@@ -43,14 +43,14 @@ const Footer = () => {
                 </Typography>
               </div>
               <div className="flex gap-4 pt-10 lg:pt-16">
-              <figure className="relative object-cover object-center !rounded-full w-11 h-11 flex items-center justify-center bg-gray-300">
-            <FaGoogle className="text-xl text-[#ff5600]" />
+              <figure className="relative object-cover object-center !rounded-full w-11 h-11 flex items-center justify-center  bg-[#ff5600] md:bg-gray-300">
+            <FaGoogle className="text-xl text-white md:text-[#ff5600]" />
           </figure>
-              <figure className="relative object-cover object-center !rounded-full w-11 h-11 flex items-center justify-center bg-gray-300">
-            <FaTwitter className="text-xl text-[#ff5600]" />
+              <figure className="relative object-cover object-center !rounded-full w-11 h-11 flex items-center justify-center bg-[#ff5600] md:bg-gray-300">
+            <FaTwitter className="text-xl text-white md:text-[#ff5600]" />
           </figure>
-              <figure className="relative object-cover object-center !rounded-full w-11 h-11 flex items-center justify-center bg-gray-300">
-            <FaInstagram className="text-xl text-[#ff5600]" />
+              <figure className="relative object-cover object-center !rounded-full w-11 h-11 flex items-center justify-center bg-[#ff5600] md:bg-gray-300">
+            <FaInstagram className="text-xl text-white md:text-[#ff5600]" />
           </figure>
               </div>
             </div>
