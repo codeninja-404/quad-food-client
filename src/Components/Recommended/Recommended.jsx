@@ -11,10 +11,11 @@ import RecommendedItemCard from "./RecommendedItemCard";
 import { CardPlacehoderSkeleton } from "../Shared/CardPlacehoderSkeleton";
 import { useContext } from "react";
 import { ItemContext } from "../../Api/ItemProvider";
+import { AddMore } from "../AddMore/AddMore";
 
 const Recommended = () => {
   const { data, loading } = useContext(ItemContext);
-  console.log(data, loading);
+
   const foodItems = data.Items;
   const recommendedFoods = foodItems?.filter(
     (item) => item.IsRecommended === true
@@ -29,7 +30,7 @@ const Recommended = () => {
           <h1 className="text-2xl font-bold">Recommended</h1>
         </div>
         <div className="flex justify-center items-center gap-4">
-          <p className="text-[#ff5600] text-xl hidden md:block">AddMore</p>
+          <AddMore></AddMore>
           <div className="flex gap-1">
             <div className="image-swiper-button-prev">
               <MdArrowBackIos className="text-2xl" />

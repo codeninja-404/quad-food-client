@@ -10,10 +10,10 @@ import PopulerItemCard from "./PopulerItemCard";
 import { useContext } from "react";
 import { ItemContext } from "../../Api/ItemProvider";
 import { CardPlacehoderSkeleton } from "../Shared/CardPlacehoderSkeleton";
+import { AddMore } from "../AddMore/AddMore";
 
 const Populer = () => {
   const { data, loading } = useContext(ItemContext);
-  console.log(data, loading);
   const foodItems = data.Items;
   const popularFoods = foodItems?.filter((item) => item.IsPopular === true);
 
@@ -24,10 +24,12 @@ const Populer = () => {
     >
       <div className="flex mx-4 justify-between items-center">
         <div>
+          
           <h1 className="text-2xl font-bold">Populer</h1>
         </div>
         <div className="flex justify-center items-center gap-4">
-          <p className="text-[#ff5600] text-xl hidden md:block">AddMore</p>
+          
+          <AddMore></AddMore>
           <div className="flex gap-1">
             <div className="image-swiper-button-prev">
               <MdArrowBackIos className="text-2xl" />

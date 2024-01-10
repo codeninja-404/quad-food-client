@@ -64,40 +64,25 @@ const NavBar = () => {
                         Home
                       </NavLink>
 
-                      <NavLink
-                        to="*"
-                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
-                      >
+                      <div className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
                         Details
-                      </NavLink>
+                      </div>
 
-                      <NavLink
-                        to="*"
-                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
-                      >
+                      <div className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
                         Category
-                      </NavLink>
+                      </div>
 
-                      <NavLink
-                        to="*"
-                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
-                      >
+                      <div className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
                         My Favorites
-                      </NavLink>
+                      </div>
 
-                      <NavLink
-                        to="*"
-                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
-                      >
+                      <div className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
                         Profile
-                      </NavLink>
+                      </div>
 
-                      <NavLink
-                        to="*"
-                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
-                      >
+                      <div className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
                         Log in/Sign up
-                      </NavLink>
+                      </div>
                     </div>
                   </div>
                 )}
