@@ -14,6 +14,9 @@ import { CardPlacehoderSkeleton } from "../Shared/CardPlacehoderSkeleton";
 const Populer = () => {
   const { data, loading } = useContext(ItemContext);
   console.log(data, loading);
+  const foodItems = data.Items;
+  const popularFoods = foodItems?.filter((item) => item.IsPopular === true);
+
   return (
     <div
       className="mx-auto  max-w-screen-xl
@@ -47,21 +50,30 @@ const Populer = () => {
         }}
         modules={[Navigation]}
       >
-        <SwiperSlide>
-          <PopulerItemCard></PopulerItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <PopulerItemCard></PopulerItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <PopulerItemCard></PopulerItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <PopulerItemCard></PopulerItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardPlacehoderSkeleton></CardPlacehoderSkeleton>
-        </SwiperSlide>
+        {loading ? (
+          <>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+          </>
+        ) : (
+          <>
+            {popularFoods?.map((item) => (
+              <SwiperSlide key={item.Id}>
+                <PopulerItemCard item={item}></PopulerItemCard>
+              </SwiperSlide>
+            ))}
+          </>
+        )}
       </Swiper>
     </div>
   );

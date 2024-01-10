@@ -5,8 +5,9 @@ export const ItemContext = createContext(null);
 const ItemProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-  
+
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       try {
         const response = await axios.get(

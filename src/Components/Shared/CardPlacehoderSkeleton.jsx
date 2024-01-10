@@ -2,7 +2,7 @@ import { CardBody, CardHeader, Typography } from "@material-tailwind/react";
 
 export function CardPlacehoderSkeleton() {
   return (
-    <div className="h-[250px] w-52 lg:h-[300px] lg:w-60 animate-pulse">
+    <div className="h-[250px] w-52 mb-20 lg:h-[300px] lg:w-60 animate-pulse">
       <CardHeader className="relative grid h-[250px] w-52 lg:h-[300px] lg:w-60 place-items-center bg-gray-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
