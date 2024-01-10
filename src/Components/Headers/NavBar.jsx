@@ -1,9 +1,4 @@
-import {
-  Typography,
-  
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
+import { Typography, Button, IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
@@ -50,32 +45,60 @@ const NavBar = () => {
                   className="flex rounded-xl justify-between gap-7 items-center p-3  bg-white font-bold  text-black   active:bg-gray-50 shadow-none w-30 md:w-40"
                 >
                   Menu
-                  <IoIosArrowDown className={` shadow-none text-[#ff5600]  h-3 w-3 transition-transform  ${
+                  <IoIosArrowDown
+                    className={` shadow-none text-[#ff5600]  h-3 w-3 transition-transform  ${
                       isOpen ? "-rotate-180" : ""
-                    }`} />
+                    }`}
+                  />
                 </Button>
                 {isOpen && (
                   <div className="fixed w-40 z-50  shadow-lg">
-                    <ul className="absolute -left-16 md:left-0 w-40  py-3 mt-2 bg-white border rounded-2xl overflow-hidden">
-                      <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
-                        <NavLink className="p-2  ">Home</NavLink>
-                      </li>
-                      <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
-                        <NavLink className="p-2  ">Details</NavLink>
-                      </li>
-                      <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
-                        <NavLink className="p-2  ">Category</NavLink>
-                      </li>
-                      <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
-                        <NavLink className="p-2  ">My Favorites</NavLink>
-                      </li>
-                      <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
-                        <NavLink className="p-2  ">Profile</NavLink>
-                      </li>
-                      <li className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]">
-                        <NavLink className="p-2  ">Log in/Sign up</NavLink>
-                      </li>
-                    </ul>
+                    <div
+                      id="navLink"
+                      className="absolute -left-16 md:left-0 w-40  py-3 mt-2 bg-white border rounded-2xl overflow-hidden flex flex-col"
+                    >
+                      <NavLink
+                        to="/"
+                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
+                      >
+                        Home
+                      </NavLink>
+
+                      <NavLink
+                        to="*"
+                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
+                      >
+                        Details
+                      </NavLink>
+
+                      <NavLink
+                        to="*"
+                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
+                      >
+                        Category
+                      </NavLink>
+
+                      <NavLink
+                        to="*"
+                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
+                      >
+                        My Favorites
+                      </NavLink>
+
+                      <NavLink
+                        to="*"
+                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
+                      >
+                        Profile
+                      </NavLink>
+
+                      <NavLink
+                        to="*"
+                        className="px-2 py-1 text-sm text-gray-700 hover:bg-[#D5D5D5] hover:text-[#ff6500]"
+                      >
+                        Log in/Sign up
+                      </NavLink>
+                    </div>
                   </div>
                 )}
               </div>
