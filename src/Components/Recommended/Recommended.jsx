@@ -8,8 +8,17 @@ import "./Styles.css";
 
 import { Navigation } from "swiper/modules";
 import RecommendedItemCard from "./RecommendedItemCard";
+import { CardPlacehoderSkeleton } from "../Shared/CardPlacehoderSkeleton";
+import { useContext } from "react";
+import { ItemContext } from "../../Api/ItemProvider";
 
 const Recommended = () => {
+  const { data, loading } = useContext(ItemContext);
+  console.log(data, loading);
+  const foodItems = data.Items;
+  const recommendedFoods = foodItems?.filter(
+    (item) => item.IsRecommended === true
+  );
   return (
     <div
       className="mx-auto  max-w-screen-xl
@@ -43,21 +52,30 @@ const Recommended = () => {
         }}
         modules={[Navigation]}
       >
-        <SwiperSlide>
-          <RecommendedItemCard></RecommendedItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <RecommendedItemCard></RecommendedItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <RecommendedItemCard></RecommendedItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <RecommendedItemCard></RecommendedItemCard>
-        </SwiperSlide>
-        <SwiperSlide>
-          <RecommendedItemCard></RecommendedItemCard>
-        </SwiperSlide>
+        {loading ? (
+          <>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+            <SwiperSlide>
+              <CardPlacehoderSkeleton />
+            </SwiperSlide>
+          </>
+        ) : (
+          <>
+            {recommendedFoods?.map((item) => (
+              <SwiperSlide key={item.Id}>
+                <RecommendedItemCard item={item}></RecommendedItemCard>
+              </SwiperSlide>
+            ))}
+          </>
+        )}
       </Swiper>
     </div>
   );
