@@ -32,10 +32,10 @@ const Recommended = () => {
         <div className="flex justify-center items-center gap-4">
           <AddMore></AddMore>
           <div className="flex gap-1">
-            <div className="image-swiper-button-prev">
+            <div className="image2-swiper-button-prev">
               <MdArrowBackIos className="text-2xl" />
             </div>
-            <div className="image-swiper-button-next">
+            <div className="image2-swiper-button-next">
               <MdArrowForwardIos className="text-2xl" />
             </div>
           </div>

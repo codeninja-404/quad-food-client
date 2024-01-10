@@ -42,7 +42,7 @@ const Populer = () => {
       </div>
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={1}
+        spaceBetween={.1}
         grabCursor={true}
         className="mySwiper"
         navigation={{
