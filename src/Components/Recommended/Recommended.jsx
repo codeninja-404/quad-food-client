@@ -26,16 +26,16 @@ const Recommended = () => {
     >
       <div className="flex mx-4 justify-between items-center">
         <div>
-          <h1 className="text-3xl">Recommended</h1>
+          <h1 className="text-2xl font-bold">Recommended</h1>
         </div>
-        <div className="flex justify-center items-center">
-          <p className="text-[#ff5600] text-xl">AddMore</p>
-          <div className="flex gap-2 px-4">
-            <div className="image2-swiper-button-prev">
-              <MdArrowBackIos className="text-xl" />
+        <div className="flex justify-center items-center gap-4">
+          <p className="text-[#ff5600] text-xl hidden md:block">AddMore</p>
+          <div className="flex gap-1">
+            <div className="image-swiper-button-prev">
+              <MdArrowBackIos className="text-2xl" />
             </div>
-            <div className="image2-swiper-button-next">
-              <MdArrowForwardIos className="text-xl" />
+            <div className="image-swiper-button-next">
+              <MdArrowForwardIos className="text-2xl" />
             </div>
           </div>
         </div>
