@@ -1,16 +1,18 @@
-import { CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import {
+  CardBody,
+  Typography,
+} from "@material-tailwind/react";
 
 const PopulerItemCard = ({ item }) => {
   return (
     <div>
-      <CardHeader className="h-[250px] w-52 lg:h-[300px] lg:w-60 rounded-lg shadow-md  shadow-black mx-auto">
-        <div
-          //   style={{
-          //     backgroundImage: `url(${item?.ImageUrl})`,
-          //   }}
-          className={`absolute inset-0 m-0 h-full  rounded-none bg-[url('${item?.ImageUrl}')] bg-cover bg-center`}
-        ></div>
-      </CardHeader>
+      <div className="h-[250px] w-52 lg:h-[300px] lg:w-60 rounded-lg shadow-md  shadow-black mx-auto overflow-hidden">
+        <img
+          src={item.ImageUrl}
+          alt="Food Image"
+          className="w-full h-full object-cover"
+        />
+      </div>
       <CardBody className="text-center">
         <Typography color="blue-gray" className="font-medium" textGradient>
           {item?.Name}
