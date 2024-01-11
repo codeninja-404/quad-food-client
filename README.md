@@ -24,8 +24,13 @@ A user-friendly form is implemented on the webpage, allowing users to effortless
 - React.js
 - CSS
 - Tailwind CSS
+- SwiperJS
 - Material Tailwind
+- Axios
+- React Icons
 - React Context
+- React Hot Toast
+- React Router Dom
 - React Hook Form
 
 ## Getting Started
