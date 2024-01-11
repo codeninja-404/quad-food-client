@@ -14,12 +14,9 @@ import { ItemContext } from "../../Api/ItemProvider";
 import { AddMore } from "../AddMore/AddMore";
 
 const Recommended = () => {
-  const { data, loading } = useContext(ItemContext);
+  const { data, loading, setData } = useContext(ItemContext);
 
-  const foodItems = data.Items;
-  const recommendedFoods = foodItems?.filter(
-    (item) => item.IsRecommended === true
-  );
+  const recommendedFoods = data.filter((item) => item.IsRecommended === true);
   return (
     <div
       className="mx-auto  max-w-screen-xl
