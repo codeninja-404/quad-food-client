@@ -29,29 +29,23 @@ export function AddMore() {
   const onSubmit = async (FromData) => {
     try {
       const imageFile = { image: FromData?.photourl[0] };
-
       const res = await axios.post(uploadAPI, imageFile, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-
       const ImageUrl = res.data?.data?.display_url;
-
       setId((prevId) => prevId + 1);
-
       const Name = FromData?.Name;
       const Price = parseInt(FromData?.Price);
       const IsPopular = FromData?.IsPopular || false;
       const IsRecommended = FromData?.IsRecommended || false;
-
       if (IsPopular === false && IsRecommended === false) {
         handleOpen();
         return toast.error(
           "Please select at least one option (Popular or Recommended)"
         );
       }
-
       const newItem = {
         Id,
         Name,
@@ -64,8 +58,9 @@ export function AddMore() {
       setData([...data, newItem]);
       console.log(data);
     } catch (error) {
-      toast.error("An error occurred while submitting the form.");
+      toast.error("An error occurred while adding the food item.");
     }
+    toast.success("Food item added successfully.");
     handleOpen();
   };
 

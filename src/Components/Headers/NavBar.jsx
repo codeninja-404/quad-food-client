@@ -18,7 +18,7 @@ const NavBar = () => {
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 ml-2 cursor-pointer py-1.5 text-xl font-extrabold"
+          className="mr-4 ml-2 cursor-pointer py-1.5 text-xl font-extrabold font-Baloo"
         >
           pti.
         </Typography>

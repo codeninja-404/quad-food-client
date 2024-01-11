@@ -31,7 +31,7 @@ const Footer = () => {
                   as="a"
                   href="#"
                   variant="h6"
-                  className="mr-4 ml-2 text-2xl font-extrabold cursor-pointer py-1.5"
+                  className="mr-4 ml-2 font-Baloo text-2xl font-extrabold cursor-pointer py-1.5"
                 >
                   pti<span className="text-red-500">.</span>
                 </Typography>
