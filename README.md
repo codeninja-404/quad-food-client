@@ -36,7 +36,7 @@ A user-friendly form is implemented on the webpage, allowing users to effortless
 ## Getting Started
 
 1. Clone the repository.
-2. Install dependencies: `npm init`.
+2. Install dependencies: `npm i`.
 3. Run the development server: `npm run dev`.
 
 ## Features
